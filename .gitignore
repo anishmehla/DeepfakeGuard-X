@@ -1,0 +1,45 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Virtual Environments
+.venv/
+env/
+venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Datasets & Crops (NEVER commit media)
+data/raw/*
+!data/raw/.gitkeep
+data/crops/*
+!data/crops/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.png
+*.jpg
+*.jpeg
+!reports/figures/*.png
+
+# Model Checkpoints & Weights
+checkpoints/*
+!checkpoints/.gitkeep
+weights/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Tracking & Logs
+wandb/
+runs/
+*.log
+
+# OS & Editor files
+.DS_Store
+.vscode/
+.idea/
