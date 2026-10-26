@@ -1,0 +1,31 @@
+project_name: "DeepfakeGuard-X"
+run_name: "effnet_b4_robust_attn"
+seed: 42
+
+data:
+  raw_ffpp_dir: "data/raw/ffpp"
+  raw_celebdf_dir: "data/raw/celebdf"
+  splits_dir: "data/splits"
+  train_csv: "data/splits/ffpp_train_split.csv"
+  val_csv: "data/splits/ffpp_val_split.csv"
+  test_csv: "data/splits/celebdf_test_split.csv"
+  crops_dir: "data/crops"
+  image_size: 256
+  frames_per_video: 16
+  margin_ratio: 0.20
+  num_workers: 4
+  use_robust_aug: true
+
+model:
+  backbone: "efficientnet_b4"
+  pretrained: true
+  use_spatial_attention: true
+  dropout: 0.4
+
+train:
+  batch_size: 32
+  epochs: 20
+  lr: 0.0001
+  weight_decay: 0.01
+  save_path: "checkpoints/robust_best.pt"
+  use_wandb: true

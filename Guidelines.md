@@ -17,7 +17,7 @@ DeepfakeGuard-X/
 │   └── crops/                   # Untracked: Extracted 256x256 face images
 │
 ├── src/                         # All project logic and runnable modules
-│   ├── __init__.py
+│   ├── __init__.py 
 │   ├── data.py                  # Step 1: Disjoint splits + Face extraction
 │   ├── dataset.py               # Step 2: PyTorch Dataset, DataLoader, transforms
 │   ├── model.py                 # Step 3: timm backbones + classification head
